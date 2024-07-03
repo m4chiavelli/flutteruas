@@ -16,9 +16,7 @@ class _UserListState extends State<UserList> {
 
   TextEditingController Email = TextEditingController();
 
-  List<UserData> daftarUser = [
-
-  ];
+  List<UserData> daftarUser = [];
 
   String btnSimpanText = "Simpan";
   String btnUbahText = "Ubah";
@@ -81,7 +79,12 @@ class _UserListState extends State<UserList> {
                       int umur = int.parse(Umur.text);
 
                       if (btnSimpanText == "Simpan") {
-                          daftarUser.add(UserData(Nama.text, int.parse(Umur.text), Email.text));
+                        for (int umur = 0;
+                            umur < int.parse(Umur.text);
+                            umur++) {
+                          daftarUser.add(UserData(
+                              Nama.text, int.parse(Umur.text), Email.text));
+                        }
                       } else {
                         UserData userData = daftarUser[indexDipilih];
                         userData.nama = Nama.text;

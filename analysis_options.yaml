@@ -1,1 +1,2 @@
-include: package:flutter_lints/flutter.yaml
+dev_dependencies:
+  flutter_lints: ^2.0.0 # atau versi terbaru
